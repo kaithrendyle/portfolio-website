@@ -1,0 +1,78 @@
+html, body {
+  width:100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("img/whistler-background.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.car {
+  width:6%;
+  position: absolute;
+  top:48%;
+  left: 20%;
+}
+
+.car img {
+  width: 100%;
+}
+
+.paraglider {
+  width:7%;
+  position: absolute;
+  top:25%;
+  left: 20%;
+}
+.paraglider img {
+  width: 100%;
+}
+
+.smoke {
+  width:3%;
+  position: absolute;
+  top:31%;
+  left: 54.5%;
+  opacity: 0;
+}
+.smoke img {
+  width: 100%;
+}
+
+/*         Animations
+----------------------------*/
+.paraglider {
+  -webkit-animation: sway-paraglider 9s ease-in-out infinite;
+}
+.car {
+  -webkit-animation: drive-car 9s linear infinite;
+}
+.smoke {
+  -webkit-animation: steam 3s infinite;
+}
+
+
+/*         Keyframes
+----------------------------*/
+
+@-webkit-keyframes sway-paraglider {
+  0%   {-webkit-transform: rotate(-10deg) translateY(-10px) scale(1);}
+  25%  {-webkit-transform: rotate(10deg) translateY(10px) scale(1.1);}
+  50%  {-webkit-transform: rotate(-10deg) translateY(30px) scale(1.2);}
+  75%  {-webkit-transform: rotate(10deg) translateY(50px) scale(1.3);}
+  100% {-webkit-transform: rotate(-15deg) translateY(70px) scale(1.4);}
+}
+
+@-webkit-keyframes drive-car {
+  100% {-webkit-transform: translateX(280px);}
+}
+
+@-webkit-keyframes steam {
+  40% { opacity: .5;}
+  60% { opacity: 1;}
+  80% {opacity: .5;}
+  100% {-webkit-transform: translate(-20%, -35%) rotateZ(25deg); }
+}
