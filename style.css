@@ -60,7 +60,7 @@ hr {border-top: 2px dotted #000; width: 100%; }
 h1 { font-family: "Montserrat"; font-size: 1.777em; }
 h2 { font-size: 1em; font-family: "Montserrat",sans-serif; }
 h3 { font-size: 1em; font-family: "Montserrat",sans-serif; }
-h4 { font-size: 0.75em; }
+h4 { font-size: 1em; }
 p  { font-size: 0.75em; }
 
 .small {
@@ -76,6 +76,10 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+p::selection, li::selection, a::selection {
+	background: #FD6783;
 }
 
 body, html {
@@ -301,7 +305,7 @@ body {
 }
 
 .skills {
-	font-size: .563em;
+	font-size: .75em;
 	padding: 0 0px;
 }
 .skills::before{
@@ -389,14 +393,14 @@ body {
 	align-items: flex-start;
 	max-width: 1000px;
 	margin: auto;
+	padding: 1em;
 }
  .item {
 	position: relative;
 	width: 100%;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
-  max-width: 33.333333%;
+	padding: 0 15px 15px 15px;
+	max-width: 50%;
 }
 .item:nth-of-type(3n) {
 	margin-right: 0;
@@ -446,7 +450,6 @@ body {
 }
 .project-type {
 	width: 100%;
-	font-weight: 200;
 	margin: 30px 0;
 }
 .grid-row {
@@ -467,7 +470,7 @@ body {
 
 .container {
 	padding: 1em;
-	max-width: 100%;
+
 }
 .footer {
 	width: 100%;
@@ -632,10 +635,6 @@ textarea {
 		display: inline-block;
 	}
 
-	.resume-buttons a:first-child {
-		margin-right: 20px;
-	}
-
 }
 
 @media screen and (min-width: 769px) {
@@ -707,6 +706,10 @@ textarea {
 		padding: 5% 15%;
 	}
 
+	.grid .item {
+		max-width: 33.333333%;
+	}
+
 
 }
 
@@ -715,10 +718,15 @@ textarea {
 		-webkit-flex-direction: row;
 		flex-direction: row;
 	}
-
+	.myPhoto img, .resume-buttons a{
+		margin-right: -95px;
+	}
 	.container {
 	max-width: 970px;
-
+	padding: 0;
+	}
+	.grid {
+		padding: 0;
 	}
 	.frame {
 		width: 60%;
@@ -735,7 +743,7 @@ textarea {
 	}
 
 	.container {
-		max-width: 1170px;
+		max-width: 1000px;
 	}
 
 	.order-left {
