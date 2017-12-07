@@ -410,7 +410,7 @@ body {
 	color: #fff;
 	padding: 10px 20px;
 }
-.item a:hover {
+.item a:hover, .item a:focus {
 	color: #FD6783;
 }
 .item img {
@@ -445,7 +445,7 @@ body {
 	letter-spacing: 2px;
 	font-style: italic;
 }
-.item:hover .project-desc {
+.item:hover .project-desc, .item:focus .project-desc {
   opacity: 1;
 }
 .project-type {
